@@ -45,7 +45,29 @@ class TestBilletera(unittest.TestCase):
         self.b= BilleteraElectronica(1,"Melanie","Gomes",23893494,2212)
         self.assertEqual(self.b.recargas.__len__(),0)
         
-    def testprueba(self):     
+    def testFrontera(self):
+        self.b = BilleteraElectronica(1,'vero', 'mazu', 1231523, 9929)
+        self.b.recargar(500,"enero", 21332)
+        self.b.consumir(500 , "enero", 2541,999)
+        self.assertEqual(self.b.disp,0)
+    
+    def testFrontera1(self):
+        self.b = BilleteraElectronica(1,'vero', 'mazu', 1231523, 9929)
+        self.b.recargar(500,"enero", 21332)
+        self.b.consumir(0 , "enero", 2541,999)
+        self.assertEqual(self.b.disp,500)
+
+    def testEsquina(self):
+       self.b = BilleteraElectronica(1,'vero', 'mazu', 1231523, 9929)
+        self.b.recargar(500,"enero", 21332)
+        self.b.consumir(499 , "enero", 2541,999)
+        self.assertEqual(self.b.disp,1)
+    
+    def testEsquina1(self):
+        self.b = BilleteraElectronica(1,'vero', 'mazu', 1231523, 9929)
+        self.b.recargar(500,"enero", 21332)
+        self.b.consumir(1 , "enero", 2541,999)
+        self.assertEqual(self.b.disp,499)
     
         
         
