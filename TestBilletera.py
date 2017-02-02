@@ -45,6 +45,7 @@ class TestBilletera(unittest.TestCase):
         self.b= BilleteraElectronica(1,"Melanie","Gomes",23893494,2212)
         self.assertEqual(self.b.recargas.__len__(),0)
         
+    def testprueba(self):     
     
         
         
