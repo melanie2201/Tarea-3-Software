@@ -4,7 +4,8 @@
 '''
 Created on Feb 1, 2017
 
-@author: melanie
+@author: melanie Gomes 1310544
+@author: Veronica Mazutiel 1310853
 
 '''
 
