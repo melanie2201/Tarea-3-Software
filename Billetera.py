@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 '''
 Created on Feb 1, 2017
 
@@ -5,7 +7,6 @@ Created on Feb 1, 2017
 @author: Veronica Mazutiel
 '''
 import sys
-
 class BilleteraElectronica:
     def __init__(self,identificador,nombre,apellido, cedula,pin):
         #Verificaciones de tipo
