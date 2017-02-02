@@ -8,7 +8,7 @@ Created on Feb 1, 2017
 
 '''
 
-from Billetera import BilleteraElectronica 
+from Billetera import *
 import unittest 
 
 class TestBilletera(unittest.TestCase):
@@ -44,7 +44,7 @@ class TestBilletera(unittest.TestCase):
     def testRecargas(self):
         self.b= BilleteraElectronica(1,"Melanie","Gomes",23893494,2212)
         self.assertEqual(self.b.recargas.__len__(),0)
-        
+
     def testFrontera(self):
         self.b = BilleteraElectronica(1,'vero', 'mazu', 1231523, 9929)
         self.b.recargar(float(sys.maxint),"enero", 21332)
