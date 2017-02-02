@@ -31,7 +31,7 @@ class BilleteraElectronica:
         return self.disp
         
     def recargar(self,monto,fecha,id):
-         #Verificaciones de tipo
+        #Verificaciones de tipo
         try:
             assert(type(fecha) is str  and type(id) is int and type(monto) is float)
         except:
@@ -43,7 +43,7 @@ class BilleteraElectronica:
         except:
             print("La recarga debe ser de un moto positivo")
         
-        self.disp+=monto;
+        self.disp+=monto
         self.recargas.append([monto,fecha,id]) 
         
     def consumir(self,monto,fecha,id,pinDado):
@@ -63,7 +63,10 @@ class BilleteraElectronica:
         try: 
             assert(monto<=self.saldo())
         except:
-            print("Saldo insuficiente.")
+            print("Saldo insuficiente.Su saldo es:")
+            print(self.saldo())
+            print("Monto del consumo: ")
+            print(monto)
             return
         
         self.disp-=monto
@@ -77,5 +80,3 @@ class BilleteraElectronica:
     def listaConsumos(self):
         for i in range(len(self.consumos)):
             print( self.consumos[i])
-
-        
