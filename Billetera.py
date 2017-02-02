@@ -41,7 +41,7 @@ class BilleteraElectronica:
         try: 
             assert(monto>0)
         except:
-            print("La recarga debe ser de un moto positivo")
+            print("La recarga debe ser de un monto positivo")
         
         self.disp+=monto
         self.recargas.append([monto,fecha,id]) 
